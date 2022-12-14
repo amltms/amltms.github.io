@@ -1,0 +1,127 @@
+@font-face {
+	font-family: Helvetica;
+	src: url(../fonts/HelveticaWorld-Regular.ttf);
+}
+
+@font-face {
+	font-family: Helvetica;
+	src: url(../fonts/HelveticaWorld-Bold.ttf);
+	font-weight: bold;
+}
+body {
+	overflow: scroll;
+	overflow: overlay;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap');
+
+/* width */
+::-webkit-scrollbar {
+	width: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	border: 3px solid rgba(0, 0, 0, 0);
+	background-clip: padding-box;
+	border-radius: 1rem;
+	background-color: rgba(183, 183, 183, 0.4);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	border: 3px solid rgba(0, 0, 0, 0);
+	background-clip: padding-box;
+	border-radius: 1rem;
+	background-color: rgba(94, 94, 94, 0.4);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	color: black;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	font-family: Helvetica;
+	transition: 0.2s;
+	text-decoration: none;
+	color: black;
+	margin: 0;
+}
+
+h1,
+h2,
+h3 {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	line-height: 1;
+}
+
+h1 {
+	font-size: 7vw;
+	margin-bottom: 1rem;
+}
+
+h2 {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+h3 {
+	font-size: 1.7rem;
+	margin-bottom: 0.5rem;
+}
+
+p {
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+button {
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	font-size: 1.2rem;
+	font-weight: 300;
+	display: flex;
+	align-items: center;
+}
+
+hr {
+	border: none;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	margin: 1rem 0;
+}
+
+textarea:focus,
+input:focus {
+	outline: none;
+}
+
+.active {
+	text-decoration: underline;
+	text-underline-offset: 0.5rem;
+	text-decoration-thickness: 1px;
+}
+
+.animate-text {
+	animation: textTransition 1s;
+}
+
+@keyframes textTransition {
+	0% {
+		transform: translateY(100%);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
