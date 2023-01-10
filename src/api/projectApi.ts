@@ -3,7 +3,7 @@ export const projects = [
 		id: 1,
 		title: 'Shutter',
 		tagline: 'Shutter offers a user-friendly platform for searching and accessing information on films and TV shows',
-		backgroundImg: 'Shutter-bg.jpg',
+		backgroundImg: 'shutter-bg.jpg',
 		github: 'shutternext',
 		details: {
 			year: ['2022'],

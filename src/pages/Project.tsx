@@ -156,9 +156,9 @@ export const Project = () => {
 								<motion.img initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} src={`${process.env.PUBLIC_URL}/${img}`} alt="Shutter" key={index} />
 							))}
 							<Mobile initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-								<img src={`${process.env.PUBLIC_URL}/Shutter-home-m.png`} alt="Shutter" />
-								<img src={`${process.env.PUBLIC_URL}/Shutter-overview-m.png`} alt="Shutter" />
-								<img src={`${process.env.PUBLIC_URL}/Shutter-genre-m.png`} alt="Shutter" />
+								<img src={`${process.env.PUBLIC_URL}/shutter-home-m.png`} alt="Shutter" />
+								<img src={`${process.env.PUBLIC_URL}/shutter-overview-m.png`} alt="Shutter" />
+								<img src={`${process.env.PUBLIC_URL}/shutter-genre-m.png`} alt="Shutter" />
 							</Mobile>
 						</Imgs>
 					</Content>
