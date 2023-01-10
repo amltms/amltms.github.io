@@ -9,6 +9,6 @@ export type ProjectType = {
 	details: {
 		year: string[];
 		stack: string[];
-		roles: string[];
+		description: string;
 	};
 };

@@ -2,17 +2,16 @@ export const projects = [
 	{
 		id: 1,
 		title: 'Shutter',
-		tagline: 'Access information on films and TV shows',
-		description: 'A web application that allows you to search through movies and TV shows using the Movie Database (TMDB) API.',
-		backgroundImg: 'shutter-home.jpg',
+		tagline: 'Shutter offers a user-friendly platform for searching and accessing information on films and TV shows',
+		backgroundImg: 'Shutter-bg.jpg',
 		github: 'shutternext',
 		details: {
 			year: ['2022'],
-			stack: ['TypeScript', 'NextJS', 'React', 'Node', 'Styled-Components'],
-			roles: ['Full-Stack', 'Design'],
+			stack: ['TypeScript', 'NextJS', 'React', 'Styled-Components', 'Framer-Motion'],
+			description: 'Shutter is a web application that allows users to view information on films and TV shows. It uses the The Movie Database API to fetch data. The application is built with React and Next.js and deployed on Vercel.',
 		},
 		url: 'https://shutteraml.vercel.app/',
-		imgs: ['shutter-home.jpg', 'shutter-home-2.jpg', 'shutter-login.jpg', 'shutter-register.jpg', 'shutter-overview.jpg', 'shutter-overview-2.jpg'],
+		imgs: ['shutter-home-scroll.png', 'shutter-search.png', 'shutter-overview.png', 'shutter-genre.png'],
 	},
 	{
 		id: 2,
@@ -24,7 +23,7 @@ export const projects = [
 		details: {
 			year: ['2021'],
 			stack: ['React', 'Node', 'MongoDB'],
-			roles: ['Full-Stack', 'Design'],
+			description: "Recommends computer components based on the users' chosen software and budget.",
 		},
 		url: '',
 		imgs: ['refinedbuilds-home.jpg', 'refinedbuilds-software.jpg', 'refinedbuilds-budget.jpg', 'refinedbuilds-suggestions-2.jpg', 'refinedbuilds-suggestions-hover.jpg'],

@@ -1,4 +1,4 @@
-import { Nav } from './components/nav/Nav';
+import { Nav } from './components/Nav';
 import { Project } from './pages/Project';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { Home } from './pages/Home';
@@ -11,10 +11,10 @@ function App() {
 	return (
 		<div className="App">
 			<Nav />
-			<AnimatePresence exitBeforeEnter initial={false}>
+			<AnimatePresence mode="wait" initial={false}>
 				<Routes location={location} key={location.pathname}>
 					<Route path="/" element={<Home />} />
-					<Route path="/projects/:id" element={<Project />} />
+					<Route path="/project/:id" element={<Project />} />
 					<Route path="/about" element={<About />} />
 				</Routes>
 			</AnimatePresence>
