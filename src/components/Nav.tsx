@@ -33,7 +33,7 @@ export const Nav = () => {
 
 	useEffect(() => {
 		const handleScroll = () => {
-			const show = window.scrollY > (120 * window.innerHeight) / 100;
+			const show = window.scrollY > (130 * window.innerHeight) / 100;
 			show ? setScrolled(true) : setScrolled(false);
 		};
 

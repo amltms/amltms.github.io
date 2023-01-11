@@ -45,7 +45,7 @@ const Title = styled(Link)`
 export const Home = () => {
 	return (
 		<Container>
-			<Backdrop src="./Shutter-bg.jpg" alt="Shutter" />
+			<Backdrop src="./shutter-bg.jpg" alt="Shutter" />
 			<Content>
 				<Title to="/project/1">
 					<h1>SHUTTER</h1>

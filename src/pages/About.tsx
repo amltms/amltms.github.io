@@ -7,15 +7,20 @@ const Container = styled(motion.div)`
 	display: flex;
 	justify-content: center;
 	padding: 10% 15vw;
+	position: relative;
+	overflow-x: hidden;
 	height: 100vh;
 	p {
 		color: white;
+	}
+	@media screen and (max-width: 900px) {
+		padding: 0 5vw;
+		align-items: center;
 	}
 `;
 
 const Text = styled.div`
 	h1 {
-		color: white;
 		font-weight: bold;
 		font-size: 8vw;
 	}
@@ -23,12 +28,25 @@ const Text = styled.div`
 		font-size: 4rem;
 		font-weight: 300;
 	}
+	@media screen and (max-width: 900px) {
+		h1 {
+			font-size: 4rem;
+		}
+		p {
+			font-size: 2rem;
+		}
+	}
 `;
 
 const Contacts = styled.div`
 	display: flex;
 	position: absolute;
 	bottom: 0;
+	@media screen and (max-width: 900px) {
+		p {
+			display: none;
+		}
+	}
 `;
 
 export const About = () => {

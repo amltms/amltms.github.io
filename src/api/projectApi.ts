@@ -11,7 +11,7 @@ export const projects = [
 			description: 'Shutter is a web application that allows users to view information on films and TV shows. It uses the The Movie Database API to fetch data. The application is built with React and Next.js and deployed on Vercel.',
 		},
 		url: 'https://shutteraml.vercel.app/',
-		imgs: ['shutter-home-scroll.png', 'shutter-search.png', 'shutter-overview.png', 'shutter-genre.png'],
+		imgs: ['shutter-home.png', 'shutter-search.png', 'shutter-overview.png', 'shutter-genre.png'],
 	},
 	{
 		id: 2,

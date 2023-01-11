@@ -18,7 +18,7 @@
 body {
 	margin: 0;
 	padding: 0;
-	overflow: scroll;
+	overflow-y: scroll;
 	overflow: overlay;
 	box-sizing: border-box;
 	background: black;
