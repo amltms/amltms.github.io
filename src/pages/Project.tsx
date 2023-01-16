@@ -17,6 +17,7 @@ const Header = styled.div`
 	position: relative;
 	overflow: hidden;
 	h1 {
+		fontsize: 8vw;
 		text-transform: uppercase;
 	}
 `;
@@ -42,7 +43,7 @@ const Content = styled(motion.div)`
 
 const DetailsContainer = styled.div`
 	background-color: #242424;
-	padding: 10rem 20vw;
+	padding: 5vw 20vw;
 	* {
 		color: #fff;
 	}
@@ -123,12 +124,12 @@ export const Project = () => {
 			{project && (
 				<>
 					<Header>
-						<Backdrop style={{ scale: scale }} src={`${process.env.PUBLIC_URL}/${project.backgroundImg}`} alt="Backdrop" />
+						<Backdrop style={{ scale: scale }} initial={{ scale: 0.7 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }} src={`${process.env.PUBLIC_URL}/${project.backgroundImg}`} alt="Backdrop" />
 						<h1>{project.title}</h1>
 					</Header>
-					<Content initial={{ opacity: 0, y: 400 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 400 }} transition={{ duration: 0.5 }}>
+					<Content initial={{ opacity: 0, y: 400 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 400 }} transition={{ duration: 0.3 }}>
 						<DetailsContainer>
-							<motion.div initial={{ opacity: 0, y: 400 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 400 }} transition={{ duration: 0.5 }}>
+							<motion.div initial={{ opacity: 0, y: 400 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 400 }} transition={{ duration: 0.4 }}>
 								<Details>
 									<h3>Year</h3>
 									<p>{project.details.year}</p>

@@ -86,3 +86,8 @@ img {
 	border-radius: 1rem;
 	background-color: rgba(35, 35, 35, 0.8);
 }
+
+::selection {
+	color: #ffffff;
+	background: #b58111;
+}

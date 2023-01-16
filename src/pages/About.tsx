@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Button } from '../components/util/Button';
-import { BsGithub, BsLinkedin, BsInstagram } from 'react-icons/bs';
+import { BsGithub, BsLinkedin } from 'react-icons/bs';
+import { MdOutlineAlternateEmail } from 'react-icons/md';
 import { motion } from 'framer-motion';
 
 const Container = styled(motion.div)`
@@ -25,7 +26,7 @@ const Text = styled.div`
 		font-size: 8vw;
 	}
 	p {
-		font-size: 4rem;
+		font-size: 3rem;
 		font-weight: 300;
 	}
 	@media screen and (max-width: 900px) {
@@ -59,7 +60,7 @@ export const About = () => {
 			<Contacts>
 				<Button url={`https://github.com/amltms/`} title={'Github'} svg={<BsGithub />} />
 				<Button url={`https://www.linkedin.com/in/amltms/`} title={'LinkedIn'} svg={<BsLinkedin />} />
-				<Button url={`https://www.instagram.com/amltms/`} title={'Instagram'} svg={<BsInstagram />} />
+				<Button url={`mailto:amalthomas587@gmail.com`} title={'Email'} svg={<MdOutlineAlternateEmail />} />
 			</Contacts>
 		</Container>
 	);
