@@ -23,6 +23,7 @@ const Header = styled.div`
 `;
 
 const Backdrop = styled(motion.img)`
+	transition: 0.01s;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -89,7 +90,8 @@ const Details = styled.div`
 const Imgs = styled.div`
 	padding: 5rem 20vw;
 	box-shadow: 0px -6px 15px -3px rgba(0, 0, 0, 0.8);
-	img {
+	> img {
+		width: 100%;
 		margin: 5rem 0;
 	}
 `;
@@ -98,10 +100,17 @@ const Mobile = styled(motion.div)`
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
+	margin: 5rem 0;
 	img {
-		width: auto;
+		max-width: 100%;
+		height: auto;
 		border-radius: 2rem;
 		box-shadow: 9px 10px 8px -3px rgba(0, 0, 0, 0.4);
+	}
+	@media (max-width: 2000px) {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		gap: 1rem;
 	}
 `;
 
@@ -156,11 +165,13 @@ export const Project = () => {
 							{project.imgs.map((img, index) => (
 								<motion.img initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} src={`${process.env.PUBLIC_URL}/${img}`} alt="Shutter" key={index} />
 							))}
-							<Mobile initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
-								<img src={`${process.env.PUBLIC_URL}/shutter-home-m.png`} alt="Shutter" />
-								<img src={`${process.env.PUBLIC_URL}/shutter-overview-m.png`} alt="Shutter" />
-								<img src={`${process.env.PUBLIC_URL}/shutter-genre-m.png`} alt="Shutter" />
-							</Mobile>
+							{project.mobileImgs && (
+								<Mobile initial={{ opacity: 0, y: 200 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }}>
+									{project.mobileImgs?.map((img, index) => (
+										<img src={`${process.env.PUBLIC_URL}/${img}`} alt={project.title} key={index} />
+									))}
+								</Mobile>
+							)}
 						</Imgs>
 					</Content>
 				</>

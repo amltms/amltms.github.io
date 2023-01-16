@@ -43,12 +43,12 @@ const Slider = styled.div<SliderProps>`
 	display: flex;
 	transition: 1s;
 	transform: translateX(${(props) => -props.currentSlide * 100}%);
-	transition-delay: 0.8s;
+	transition-delay: 0.6s;
 `;
 
 const SliderContainer = styled.div<SliderProps>`
 	scale: ${(props) => props.scale};
-	transition: 0.8s;
+	transition: 0.6s;
 `;
 
 export const SlideShow = ({ slidesArr }: Props) => {
@@ -68,7 +68,7 @@ export const SlideShow = ({ slidesArr }: Props) => {
 		setScale(0.5);
 		setTimeout(function () {
 			setScale(1);
-		}, 1800);
+		}, 1500);
 	};
 
 	return (

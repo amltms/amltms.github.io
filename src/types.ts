@@ -6,6 +6,7 @@ export type ProjectType = {
 	url: string;
 	backgroundImg: string;
 	imgs: string[];
+	mobileImgs?: string[];
 	details: {
 		year: string[];
 		stack: string[];

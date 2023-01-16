@@ -12,13 +12,14 @@ export const projects = [
 		},
 		url: 'https://shutteraml.vercel.app/',
 		imgs: ['shutter-home.png', 'shutter-search.png', 'shutter-overview.png', 'shutter-genre.png'],
+		mobileImgs: ['shutter-home-m.png', 'shutter-nav-m.png', 'shutter-genre-m.png'],
 	},
 	{
 		id: 2,
 		title: 'RefinedBuilds',
 		tagline: 'Recommenedation System',
 		description: "Recommends computer components based on the users' chosen software and budget.",
-		backgroundImg: 'refinedbuilds-home.jpg',
+		backgroundImg: 'refinedbuilds-bg.jpg',
 		github: 'refinedbuilds',
 		details: {
 			year: ['2021'],
