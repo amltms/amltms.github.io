@@ -23,6 +23,9 @@ const Title = styled(Link)`
 	font-size: 8vw;
 	font-weight: bold;
 	color: #ffffff;
+	@media (max-width: 900px) {
+		font-size: 2.2rem;
+	}
 `;
 
 const SlideImg = styled(motion.img)`
@@ -37,18 +40,14 @@ const SlideImg = styled(motion.img)`
 	transition: 0.5s;
 	transform: scale(0.7);
 `;
-const Container = styled(motion.div)`
-	& ${Title}:hover + ${SlideImg} {
-		transform: scale(1);
-	}
-`;
+const Container = styled(motion.div)``;
 
 export const Slide = ({ slide }: Props) => {
 	return (
 		<SlideContainer>
 			<Container>
 				<Title to={`project/${slide.id}`}>{slide.title}</Title>
-				<SlideImg initial={{ scale: 1 }} animate={{ scale: 0.7 }} src={`${process.env.PUBLIC_URL}/${slide.backgroundImg}`} />
+				<SlideImg initial={{ scale: 0.7 }} animate={{ scale: 0.7 }} src={`${process.env.PUBLIC_URL}/${slide.backgroundImg}`} />
 			</Container>
 		</SlideContainer>
 	);

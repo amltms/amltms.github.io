@@ -52,7 +52,7 @@ const Contacts = styled.div`
 
 export const About = () => {
 	return (
-		<Container initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
+		<Container initial={{ opacity: 0, x: 400 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 400 }} transition={{ duration: 0.3 }}>
 			<Text>
 				<h1>Hi,</h1>
 				<p>I'm a software engineering graduate with more than a year of experience in the industry. Experienced in full-stack development, usually working with React and TypeScript.</p>

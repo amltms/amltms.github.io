@@ -20,6 +20,11 @@ const Header = styled.div`
 		fontsize: 8vw;
 		text-transform: uppercase;
 	}
+	@media (max-width: 900px) {
+		h1 {
+			font-size: 2.2rem;
+		}
+	}
 `;
 
 const Backdrop = styled(motion.img)`
@@ -57,11 +62,14 @@ const DetailsContainer = styled.div`
 	a {
 		margin-top: 1rem;
 		font-size: 1.5rem;
-		width: 15rem;
 		font-weight: 500;
 		letter-spacing: 1.5px;
 		display: inline-block;
 		text-transform: uppercase;
+		margin-right: 1.5rem;
+		:hover {
+			color: #6a6a6a;
+		}
 	}
 `;
 
@@ -75,14 +83,22 @@ const Details = styled.div`
 		font-size: 1rem;
 		text-transform: uppercase;
 		font-weight: 500;
+		margin-top: 4px;
+		color: #6a6a6a;
 	}
 	p {
 		font-size: 1.2rem;
 		font-weight: 300;
 	}
-	div {
-		p {
-			margin-bottom: 0.5rem;
+	div > p {
+		margin-bottom: 1rem;
+	}
+
+	@media (max-width: 1200px) {
+		grid-template-columns: 1fr;
+		row-gap: 1rem;
+		div > p {
+			margin-bottom: 0.2rem;
 		}
 	}
 `;
@@ -94,23 +110,30 @@ const Imgs = styled.div`
 		width: 100%;
 		margin: 5rem 0;
 	}
+	@media (max-width: 1200px) {
+		padding: 2rem;
+		> img {
+			margin: 1rem 0;
+		}
+	}
 `;
 
 const Mobile = styled(motion.div)`
-	display: flex;
 	width: 100%;
-	justify-content: space-between;
 	margin: 5rem 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 1rem;
 	img {
 		max-width: 100%;
 		height: auto;
 		border-radius: 2rem;
 		box-shadow: 9px 10px 8px -3px rgba(0, 0, 0, 0.4);
 	}
-	@media (max-width: 2000px) {
-		display: grid;
-		grid-template-columns: 1fr 1fr 1fr;
-		gap: 1rem;
+
+	@media (max-width: 1200px) {
+		display: flex;
+		flex-direction: column;
 	}
 `;
 
@@ -133,7 +156,7 @@ export const Project = () => {
 			{project && (
 				<>
 					<Header>
-						<Backdrop style={{ scale: scale }} initial={{ scale: 0.7 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }} src={`${process.env.PUBLIC_URL}/${project.backgroundImg}`} alt="Backdrop" />
+						<Backdrop style={{ scale: scale }} initial={{ scale: 0.7 }} animate={{ scale: 1 }} exit={{ scale: 0.7 }} transition={{ duration: 0.5 }} src={`${process.env.PUBLIC_URL}/${project.backgroundImg}`} alt="Backdrop" />
 						<h1>{project.title}</h1>
 					</Header>
 					<Content initial={{ opacity: 0, y: 400 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 400 }} transition={{ duration: 0.3 }}>

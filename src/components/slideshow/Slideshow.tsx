@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { MdNavigateBefore, MdNavigateNext } from 'react-icons/md';
 import { Slide } from './Slide';
 import { ProjectType } from '../../types';
+import { useContext } from 'react';
+import { MyGlobalContext } from '../../App';
 
 interface Props {
 	slidesArr: ProjectType[];
@@ -35,6 +37,10 @@ const NavBtn = styled.button`
 	&:hover {
 		opacity: 1;
 	}
+	@media (max-width: 900px) {
+		font-size: 4rem;
+		padding: 0rem;
+	}
 `;
 
 const Slider = styled.div<SliderProps>`
@@ -52,8 +58,9 @@ const SliderContainer = styled.div<SliderProps>`
 `;
 
 export const SlideShow = ({ slidesArr }: Props) => {
-	const [currentSlide, setCurrentSlide] = useState(0);
 	const [scale, setScale] = useState(1);
+	const useGlobalContext = () => useContext(MyGlobalContext);
+	const { currentSlide, setCurrentSlide } = useGlobalContext();
 
 	useEffect(() => {
 		if (currentSlide > slidesArr.length - 1) {
@@ -61,7 +68,7 @@ export const SlideShow = ({ slidesArr }: Props) => {
 		} else if (currentSlide < 0) {
 			setCurrentSlide(slidesArr.length - 1);
 		}
-	}, [currentSlide, slidesArr.length]);
+	}, [currentSlide, setCurrentSlide, slidesArr.length]);
 
 	const handleClick = (slide: number) => {
 		setCurrentSlide(slide);
