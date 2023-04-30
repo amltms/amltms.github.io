@@ -47,7 +47,7 @@ export const Slide = ({ slide }: Props) => {
 		<SlideContainer>
 			<Container>
 				<Title to={`project/${slide.id}`}>{slide.title}</Title>
-				<SlideImg initial={{ scale: 0.7 }} animate={{ scale: 0.7 }} src={`${process.env.PUBLIC_URL}/${slide.backgroundImg}`} />
+				<SlideImg initial={{ scale: 1 }} animate={{ scale: 0.7 }} transition={{ duration: 0.1 }} src={`${process.env.PUBLIC_URL}/${slide.backgroundImg}`} />
 			</Container>
 		</SlideContainer>
 	);

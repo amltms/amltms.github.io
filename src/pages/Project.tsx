@@ -61,14 +61,21 @@ const DetailsContainer = styled.div`
 	}
 	a {
 		margin-top: 1rem;
-		font-size: 1.5rem;
-		font-weight: 500;
-		letter-spacing: 1.5px;
+		font-size: 1.2rem;
+		font-weight: 400;
+		letter-spacing: 2px;
 		display: inline-block;
 		text-transform: uppercase;
 		margin-right: 1.5rem;
 		:hover {
-			color: #6a6a6a;
+			color: #797979;
+		}
+	}
+
+	@media (max-width: 1200px) {
+		padding: 2rem;
+		a {
+			font-size: 1.2rem;
 		}
 	}
 `;
@@ -156,32 +163,30 @@ export const Project = () => {
 			{project && (
 				<>
 					<Header>
-						<Backdrop style={{ scale: scale }} initial={{ scale: 0.7 }} animate={{ scale: 1 }} exit={{ scale: 0.7 }} transition={{ duration: 0.5 }} src={`${process.env.PUBLIC_URL}/${project.backgroundImg}`} alt="Backdrop" />
+						<Backdrop style={{ scale: scale }} initial={{ scale: 0.7 }} animate={{ scale: 1 }} transition={{ duration: 0.5 }} src={`${process.env.PUBLIC_URL}/${project.backgroundImg}`} alt="Backdrop" />
 						<h1>{project.title}</h1>
 					</Header>
-					<Content initial={{ opacity: 0, y: 400 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 400 }} transition={{ duration: 0.3 }}>
+					<Content initial={{ opacity: 0, y: 400 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 400 }} transition={{ duration: 0.2 }}>
 						<DetailsContainer>
-							<motion.div initial={{ opacity: 0, y: 400 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 400 }} transition={{ duration: 0.4 }}>
-								<Details>
-									<h3>Year</h3>
-									<p>{project.details.year}</p>
-									<h3>Stack</h3>
-									<div>
-										{project.details.stack.map((i) => (
-											<p>{i}</p>
-										))}
-									</div>
-									<h3>Description</h3>
-									<p>{project.details.description}</p>
-								</Details>
-								<hr />
-								<a href={project.url} target="_blank" rel="noreferrer">
-									Website
-								</a>
-								<a href={`https://github.com/amltms/${project.github}`} target="_blank" rel="noreferrer">
-									Github
-								</a>
-							</motion.div>
+							<Details>
+								<h3>Year</h3>
+								<p>{project.details.year}</p>
+								<h3>Stack</h3>
+								<div>
+									{project.details.stack.map((i) => (
+										<p>{i}</p>
+									))}
+								</div>
+								<h3>Description</h3>
+								<p>{project.details.description}</p>
+							</Details>
+							<hr />
+							<a href={project.url} target="_blank" rel="noreferrer">
+								Website
+							</a>
+							<a href={`https://github.com/amltms/${project.github}`} target="_blank" rel="noreferrer">
+								Github
+							</a>
 						</DetailsContainer>
 
 						<Imgs>

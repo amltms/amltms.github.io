@@ -17,7 +17,11 @@ const NavBar = styled.div<Scroll>`
 		${({ scrolled }) => scrolled && 'color:black;'};
 	}
 	@media (max-width: 900px) {
-		padding: 2rem;
+		padding: 1.2rem;
+		background: black;
+		a {
+			color: white;
+		}
 	}
 `;
 
