@@ -129,7 +129,8 @@ const Mobile = styled(motion.div)`
 	width: 100%;
 	margin: 5rem 0;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: auto auto auto;
+	justify-content: space-between;
 	gap: 1rem;
 	img {
 		max-width: 100%;
@@ -138,7 +139,7 @@ const Mobile = styled(motion.div)`
 		box-shadow: 9px 10px 8px -3px rgba(0, 0, 0, 0.4);
 	}
 
-	@media (max-width: 1200px) {
+	@media (max-width: 900px) {
 		display: flex;
 		flex-direction: column;
 	}

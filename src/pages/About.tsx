@@ -7,16 +7,16 @@ import { motion } from 'framer-motion';
 const Container = styled(motion.div)`
 	display: flex;
 	justify-content: center;
-	padding: 10% 15vw;
+	padding: 0 15vw;
+	align-items: center;
 	position: relative;
-	overflow-x: hidden;
+	overflow: hidden;
 	height: 100vh;
 	p {
 		color: white;
 	}
 	@media screen and (max-width: 900px) {
 		padding: 0 5vw;
-		align-items: center;
 	}
 `;
 
@@ -34,7 +34,7 @@ const Text = styled.div`
 			font-size: 4rem;
 		}
 		p {
-			font-size: 2rem;
+			font-size: 1.5rem;
 		}
 	}
 `;
@@ -55,7 +55,7 @@ export const About = () => {
 		<Container initial={{ opacity: 0, x: 400 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: 400 }} transition={{ duration: 0.3 }}>
 			<Text>
 				<h1>Hi,</h1>
-				<p>I'm a software engineering graduate with more than a year of experience in the industry. Experienced in full-stack development, usually working with React and TypeScript.</p>
+				<p>I'm a software engineering graduate with a passion for web development. Over the past year, I've had the chance to work on a variety of interesting projects in the industry. But my love for web development doesn't stop at work - I'm always tinkering with something new in my free time.</p>
 			</Text>
 			<Contacts>
 				<Button url={`https://github.com/amltms/`} title={'Github'} svg={<BsGithub />} />

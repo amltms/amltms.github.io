@@ -12,6 +12,7 @@ const Container = styled.a`
 	align-items: center;
 	margin: 1rem;
 	padding: 1rem;
+	transition: 0.3s;
 	p {
 		font-weight: 300;
 		font-size: 1.2rem;
@@ -20,6 +21,14 @@ const Container = styled.a`
 		fill: white;
 		font-size: 2rem;
 		margin-right: 1rem;
+	}
+	:hover {
+		p {
+			color: #1abc9c;
+		}
+		svg {
+			fill: #1abc9c;
+		}
 	}
 `;
 export const Button = ({ url, title, svg }: Props) => {
